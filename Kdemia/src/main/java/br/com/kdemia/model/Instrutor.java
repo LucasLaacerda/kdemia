@@ -18,8 +18,8 @@ public class Instrutor extends GenericDomain {
 	@JoinColumn(nullable = false)
 	private Pessoa pessoa;
 	
-	@Column(nullable = false, precision = 6, scale = 2)
-	private BigDecimal salario;
+	@Column(nullable = false)
+	private float salario;
 
 	public Pessoa getPessoa() {
 		return pessoa;
@@ -29,11 +29,11 @@ public class Instrutor extends GenericDomain {
 		this.pessoa = pessoa;
 	}
 
-	public BigDecimal getSalario() {
+	public float getSalario() {
 		return salario;
 	}
 
-	public void setSalario(BigDecimal salario) {
+	public void setSalario(float salario) {
 		this.salario = salario;
 	}
 	

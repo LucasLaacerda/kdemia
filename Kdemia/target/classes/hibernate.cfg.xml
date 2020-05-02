@@ -31,7 +31,7 @@
 		<property name="show_sql">true</property>
 
 		<!-- Cria as tabelas do banco de dados -->
-		<property name="hbm2ddl.auto">validate</property>
+		<property name="hbm2ddl.auto">create</property>
 		
 		<!--  Mapeamento das Entidades -->
 		<mapping class="br.com.kdemia.model.Extra"/>
@@ -43,7 +43,7 @@
 		<mapping class="br.com.kdemia.model.Instrutor"/>
 		<mapping class="br.com.kdemia.model.Pessoa"/>
 		<mapping class="br.com.kdemia.model.Plano"/>
-	    <mapping class="br.com.kdemia.model.Planocontem"/>
+		<mapping class="br.com.kdemia.model.Usuario"/>
 		
 	</session-factory>
 

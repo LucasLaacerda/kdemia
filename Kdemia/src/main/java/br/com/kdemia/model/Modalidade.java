@@ -1,15 +1,19 @@
 package br.com.kdemia.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.ManyToAny;
 
 @SuppressWarnings("serial")
 @Entity //Entidade do hibernate - > Tabela
+@Table(name = "Modalidade")
 public class Modalidade extends GenericDomain{
 
 	@Column(length = 50, nullable = false)
@@ -21,7 +25,8 @@ public class Modalidade extends GenericDomain{
 	private Instrutor instrutor;
 	
 	//Tabela Horario -> Id horario
-	
+	@ManyToMany(mappedBy = "modalidades")
+    private List<Plano> Planos;
 	
 	
 	@Column(nullable = false)
